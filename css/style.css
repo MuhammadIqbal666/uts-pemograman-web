@@ -1,0 +1,280 @@
+/* =========================================
+   1. PENGATURAN DASAR (RESET & TYPOGRAPHY)
+   ========================================= */
+
+* {
+    font-family: Arial,  sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Jenis tulisan utama */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Warna latar belakang halaman */
+    color: #333; /* Warna teks utama */
+}
+
+/* Kontainer pembungkus agar konten tidak terlalu lebar */
+.container {
+    max-width: 1000px;
+    margin: auto; /* Membuat konten berada di tengah */
+    padding: 20px;
+}
+
+/* =========================================
+   2. HEADER & NAVIGASI UTAMA
+   ========================================= */
+.main-header {
+    background-color: #2e7d32; /* Warna hijau khas Rumah Sakit */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Pengaturan Logo */
+.logo { 
+    width: 120px; 
+    margin-bottom: 10px; 
+    border-radius: 20px;
+}
+
+.logo-small { 
+    width: 80px;
+    display: block;
+    margin: 0 auto 15px; 
+    border-radius: 20px;
+}
+
+/* Menu Navigasi di Atas (Horizontal) */
+.navbar ul {
+    list-style: none; /* Menghilangkan tanda bullet point */
+    padding: 0;
+}
+
+.navbar ul li { 
+    display: inline; /* Membuat menu berjajar ke samping */
+    margin: 0 15px; 
+}
+
+.navbar ul li a { 
+    color: white; 
+    text-decoration: none; /* Menghilangkan garis bawah link */
+    font-weight: bold; 
+}
+
+/* =========================================
+   3. HALAMAN LOGIN & HERO SECTION
+   ========================================= */
+.hero-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+}
+
+/* Background gelap untuk halaman login saja */
+.bg-dark { background-color: #1b5e20; }
+
+/* Wadah form login agar tepat di tengah layar */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Mengikuti tinggi penuh layar */
+}
+
+/* Kotak Form Login */
+.login-form {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Efek bayangan kotak */
+    width: 350px;
+}
+
+/* Menyamakan desain kotak input Username dan Password */
+input[type="text"], 
+input[type="password"] {
+    width: 100%;            /* Memenuhi lebar kontainer */
+    padding: 12px 15px;     /* Memberikan ruang di dalam kotak agar teks tidak menempel */
+    margin: 8px 0;          /* Jarak antar kotak input */
+    display: inline-block;
+    border: 1px solid #ccc; /* Warna garis pinggir standar */
+    border-radius: 4px;     /* Membuat sudut kotak sedikit melengkung */
+    box-sizing: border-box; /* Memastikan padding tidak merusak ukuran lebar */
+    font-size: 14px;
+}
+
+/* Memberikan efek warna saat kolom diklik */
+input[type="text"]:focus, 
+input[type="password"]:focus {
+    border: 1px solid #2e7d32; /* Warna hijau sesuai tema RSUD */
+    outline: none;
+    background-color: #f9fff9; /* Warna latar sangat muda saat aktif */
+}
+
+/* Pengaturan label agar rapi di atas input */
+.form-group label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* =========================================
+   4. DESAIN TABEL DATA
+   ========================================= */
+.table, .data-table {
+    width: 100%;
+    border-collapse: collapse; /* Menyatukan garis border */
+    margin-top: 15px;
+    background: #fff;
+}
+
+.table th, .table td, .data-table th, .data-table td {
+    border: 1px solid #ddd; /* Warna garis tabel */
+    padding: 12px;
+    text-align: left;
+}
+
+/* Warna latar kepala tabel */
+.table th, .data-table th { 
+    background-color: #e8f5e9; 
+    color: #333;
+}
+
+/* Judul setiap section (Jadwal/Data Pasien) */
+.judul {
+    color: #555;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    margin-top: 30px;
+}
+
+/* =========================================
+   5. DESAIN FORMULIR (INPUT & SELECT)
+   ========================================= */
+.form-group {
+    clear: both; /* Mencegah elemen berantakan karena float */
+    padding: 10px 0;
+}
+
+/* Label Input (Nama, Alamat, dll) */
+.form-group label {
+    display: block;
+    float: left;
+    width: 30%; /* Label memakan 30% lebar */
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+/* Wadah Input */
+.form-group .input {
+    display: block;
+    width: 60%;
+    float: left;
+}
+
+/* Desain kotak input teks, tanggal, dan dropdown */
+input[type=text], input[type=date], select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Padding tidak memperlebar kotak */
+}
+
+/* Input Radio (Jenis Kelamin) */
+input[type=radio] {
+    width: 30px;
+}
+
+/* =========================================
+   6. TOMBOL (BUTTONS)
+   ========================================= */
+.tombol, .btn-primary, .btn-success {
+    display: inline-block;
+    padding: 10px 25px;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.btn-primary { width: 100%; background: #2e7d32; }
+.simpan, .btn-success { background: #038ade; } /* Biru */
+.reset { background: #fb8307; margin-left: 10px; } /* Oranye */
+
+/* =========================================
+   7. LAYOUT SIDEBAR & DASHBOARD
+   ========================================= */
+.container-flex {
+    display: flex; /* Membuat sidebar dan konten bersampingan */
+    min-height: 80vh;
+}
+
+/* Area Sidebar Kiri */
+.sidebar {
+    flex: 20%; /* Lebar sidebar 20% */
+    background: black;
+    color: white;
+}
+
+.menu-sidebar {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-sidebar li {
+    border-bottom: 1px dotted #444;
+}
+
+.menu-sidebar a {
+    display: block;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Efek saat menu di sidebar disorot mouse */
+.menu-sidebar a:hover {
+    background: #3e3b3b;
+}
+
+/* Area Konten Kanan (Di samping sidebar) */
+.main-content {
+    flex: 80%; /* Lebar konten 80% */
+    padding: 20px;
+    background: #fff;
+}
+
+/* =========================================
+   8. LOGIKA TAMPILAN DATA (TARGET)
+   ========================================= */
+
+/* Sembunyikan semua data secara default */
+.content-item {
+    display: none;
+}
+
+/* Munculkan data hanya jika menu diklik (URL mengandung #ID) */
+#jadwal:target, 
+#data-pasien:target, 
+#form-daftar:target {
+    display: block;
+}
+
+/* =========================================
+   9. FOOTER & RESPONSIVE DESIGN
+   ========================================= */
+.main-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+}
+
