@@ -242,6 +242,7 @@ input[type=radio] {
 /* Efek saat menu di sidebar disorot mouse */
 .menu-sidebar a:hover {
     background: #3e3b3b;
+    border-radius: 20px;
 }
 
 /* Area Konten Kanan (Di samping sidebar) */
